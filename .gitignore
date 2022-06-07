@@ -1,8 +1,9 @@
 msg.pb*
 libproto.a
-/cmakeFiles/*
+/CMakeFiles/*
 cmake_install.cmake
-CmakeCache.txt
-Makefilea
+CMakeCache.txt
+Makefile
+msg_pb2.py
 pub
 /__pycache__/*
