@@ -1,0 +1,8 @@
+msg.pb*
+libproto.a
+/cmakeFiles/*
+cmake_install.cmake
+CmakeCache.txt
+Makefilea
+pub
+/__pycache__/*

@@ -1,0 +1,5 @@
+/home/ubuntu/Downloads/zmqpp/zmq_protobuf/CMakeFiles/proto.dir
+/home/ubuntu/Downloads/zmqpp/zmq_protobuf/CMakeFiles/pub.dir
+/home/ubuntu/Downloads/zmqpp/zmq_protobuf/CMakeFiles/myTarget.dir
+/home/ubuntu/Downloads/zmqpp/zmq_protobuf/CMakeFiles/edit_cache.dir
+/home/ubuntu/Downloads/zmqpp/zmq_protobuf/CMakeFiles/rebuild_cache.dir
