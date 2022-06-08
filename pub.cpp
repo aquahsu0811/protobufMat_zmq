@@ -9,52 +9,6 @@
 zmq::context_t m_context;
 zmq::socket_t m_socket;
 
-void send2()
-{
-    zmq::context_t m_context(1);
-    zmq::socket_t m_socket (m_context, zmq::socket_type::rep);
-    try{
-        m_socket.bind("tcp://localhost:"+std::to_string(5001));
-    }
-    catch(zmq::error_t& e)
-    {
-        //spdlog::error(e.what());
-        std::cout<<"error:"<<e.what()<<std::endl;
-    }
-    std::string data = "world";
-    while(1){
-        zmq::message_t payload(data.size());
-
-        //memcpy(topicName.data(), m_topic.data(), m_topic.size());
-        memcpy((void *)payload.data(), data.c_str(), data.size());
-
-        try{
-            m_socket.send(zmq::str_buffer("Hello, world"), zmq::send_flags::dontwait);
-        }
-        catch(zmq::error_t& e)
-        {
-            //spdlog::error(e.what());
-            std::cout<<"error"<<e.what()<<std::endl;
-        }
-    }
-}
-
-void send()
-{
-    void *context = zmq_ctx_new ();
-    void *responder = zmq_socket (context, ZMQ_REP);
-    int rc = zmq_bind (responder, "tcp://*:5000");
-    assert (rc == 0);
-
-    while (1) {
-        char buffer [10];
-        zmq_recv (responder, buffer, 10, 0);
-        printf ("Received Hello\n");
-       //  Do some 'work'
-        zmq_send (responder, "World", 5, 0);
-    }
-}
-
 void connect(int port)
 {
     m_context = zmq::context_t(1);
